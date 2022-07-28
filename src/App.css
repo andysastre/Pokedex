@@ -155,6 +155,7 @@ p{
   background-image: url(https://wallpapercave.com/wp/LOzpPkE.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  
 
 }
 
@@ -164,6 +165,7 @@ p{
 display: flex;
 flex-wrap: wrap;
 gap: 30px;
+justify-content: center;
 
 }
 
