@@ -1,0 +1,546 @@
+.App {
+  text-align: center;
+ 
+
+}
+
+@font-face {
+  font-family: imported;
+  src: url(./font/Minecraft.ttf);
+}
+/* LOGIN */
+
+.Absolute-Input{
+  
+height: 100vh;
+background-image: url(https://media1.giphy.com/media/UnuSuj53NcGyeTosZy/giphy.gif?cid=790b76117fd68f30d8669b54460a778bd3735fc197231f68&rid=giphy.gif&ct=g);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Login-Input{
+padding-top: 300px;
+}
+
+.Title-Login{
+  color: black;
+}
+
+.input {
+  max-width: 190px;
+  height: 35px;
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid #3f3f3f;
+  caret-color: #3f3f3f;
+  background-color: #212121;
+  padding: 5px;
+  color: white;
+  transition: .5s linear;
+  font-family: imported;
+  letter-spacing: 1px;
+}
+
+.input:focus {
+  border: 2px solid #fa4753;
+  caret-color: #fa4753;
+  color: #fa4753;
+  box-shadow: 4px 4px 10px #070707;
+}
+
+.input:focus::placeholder {
+  color: #fa4753;
+}
+
+.Login-Button {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 8px 30px;
+  transition: 0.5s;
+  position: relative;
+  font-size: 13px;
+  background: #333;
+  font-family: imported;
+  border: none;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.Login-Button:hover {
+  letter-spacing: 0.50em;
+  background: #ff1867;
+  color: #ff1867;
+  box-shadow: 0 0 45px #ff1867;
+}
+
+.Login-Button::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #222222;
+}
+
+.Login-Button span {
+  position: relative;
+  z-index: 1;
+}
+
+.Login-Button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.Login-Button i::before {
+  content: '';
+  position: absolute;
+  border: 2px solid #ff1867;
+  width: 7px;
+  height: 4px;
+  top: -3.5px;
+  left: 80%;
+  background: #222222;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.Login-Button:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.Login-Button i::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #ff1867;
+  width: 7px;
+  height: 4px;
+  bottom: -3.5px;
+  left: 20%;
+  background: #222222;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.Login-Button:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+
+h3{
+font-size: 50px;
+  font-family: imported;
+}
+span{
+  color: white;
+}
+p{
+  font-size: 30px;
+  font-family: imported;
+}
+
+
+/* PRESENTACION DE LOS POKEMONS */
+
+.login-title{
+  color: white;
+}
+.pok-name{
+  font-size: 17px;
+
+}
+
+.Absolute-Container{
+
+  background-image: url(https://wallpapercave.com/wp/LOzpPkE.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.container{
+
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+
+}
+
+
+.st{
+  font-size: 14px;
+}
+.card {
+  width: 190px;
+  height: 320px;
+  --border-radius: 15px;
+  --border-width: 4px;
+  appearance: none;
+  position: relative;
+  padding: 1em 2em;
+  border: 0;
+  background: rgb(5, 5, 22);
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 2;
+  border-radius: 15px;
+ 
+ }
+
+ select{
+ 
+  font-family: imported;
+ color: #ff1867;
+ background-color:#0a1a1f;
+ border-radius: 10px;
+
+ }
+ 
+
+ .card::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(
+     #488cfb,
+     #29dbbc,
+     #ddf505,
+     #ff9f0e,
+     #e440bb,
+     #655adc,
+     #488cfb
+   );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 500ms infinite;
+  animation-play-state: paused;
+ }
+ 
+ .card:hover::after {
+  animation-play-state: running;
+ }
+ 
+ @keyframes rotate-hue {
+  to {
+   filter: hue-rotate(1turn);
+  }
+ }
+ 
+ .card,
+ .card::after {
+  box-sizing: border-box;
+ }
+ 
+ .card:active {
+  --border-width: 5px;
+ }
+
+ .stats1{
+width:150px ;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: lef;
+gap: 8px;
+
+}
+.stats2{
+ 
+ display: flex;
+ flex-wrap: wrap; 
+ gap: 8px;
+}
+ 
+.search-filter{
+ padding: 0;
+ margin: 10px;
+ display: flex;
+justify-content: center;
+gap: 600px;
+}
+
+.sea{
+ padding: 0;
+}
+
+.pagination{
+ width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+
+
+
+.but {
+  --color: #ff1867;
+  padding: 0.2em 1em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  margin-left: 10px;
+  padding-top: 1px;
+ }
+ 
+ .but::before, .but::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .but::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .but::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .but:hover::before, .but:hover::after {
+  height: 200px;
+  width: 200px;
+ }
+ 
+ .but:hover {
+  color: #0a1a1f;
+ }
+ 
+ .but:active {
+  filter: brightness(.8);
+ }
+
+/* POKEMON DETAILS */
+
+.detail-container{
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7d4072af-994a-4777-b86f-f1c40b467123/daqahuy-ae1b34ec-3b3a-47a4-a5be-cd408d5fdead.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdkNDA3MmFmLTk5NGEtNDc3Ny1iODZmLWYxYzQwYjQ2NzEyM1wvZGFxYWh1eS1hZTFiMzRlYy0zYjNhLTQ3YTQtYTViZS1jZDQwOGQ1ZmRlYWQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rlfQy3pyErL2_qj2pezFeNCW5Zd5y2f3q-iMQ9v7UsI);
+  background-size: cover;
+ height: 100vh;
+  background-position: 0%; 
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  
+}
+.Card-Details{
+  padding-top: 150px;
+}
+  
+h3{
+  color: white;
+}
+
+i{
+  color: white;
+  font-size: 200px;
+}
+
+ 
+.card1{
+  width: 800px;
+  height: 600px;
+ 
+  border-radius: 20px;
+  transition: all .3s;
+ }
+ 
+ .card2 {
+  width: 800px;
+  height: 600px;
+  background-color: #1a1a1a;
+  border-radius: 20px ;
+  transition: all .2s;
+ display: flex;
+
+ }
+ 
+ .card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+ }
+
+ 
+
+ .side1{
+  width: 50%;
+  height: 100%;
+  padding-top: 20px;
+  color: white;
+ }
+
+.Cuadricula{
+border-width: 0.5px;
+border-top-style: solid;
+} 
+ 
+.presentation{
+   width: 250px;
+ }
+ 
+ .side2{
+  width: 50%;
+  height: 100%;
+  color: white;
+  border-width: 0.5px;
+  border-left-style: solid;
+  border-left-color: white;
+  gap: 20px;
+  
+}
+
+
+
+.card3{
+  width: 600px;
+  height: 500px;
+  background-image: linear-gradient(163deg, #a30f6a 0%, #abbbac 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  margin-top: 200px;
+  
+  
+ 
+ 
+ 
+ 
+ }
+ 
+ .card4 {
+  width: 600px;
+  height: 500px;
+  background-color: #1a1a1a;
+  border-radius:20px;
+  transition: all .2s;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  
+ 
+ 
+  
+ }
+ 
+ .card4:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+ }
+
+.moves-container{
+  width: 100%;
+  height: 50px;
+ border-bottom-color: white;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+ 
+}
+
+
+.moves{
+width: 90%;
+height: 100%;
+padding-top: 10px;
+padding-left: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+
+}
+
+.moves p{
+  color: white;
+}
+
+.pag {
+ margin-top: 8px;
+  --green:  #ff1867;
+  font-size: 12px;
+  padding: 0.5em 2.3em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right,#ff1867 1%, transparent 10%,transparent 10% , #ff1867 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px #ff1867, 0 0 9px 3px #ff1867;
+ }
+ 
+ .pag:hover {
+  color:  #ff1867;
+  box-shadow: inset 0 0 10px  #ff1867, 0 0 9px 3px  #ff1867;
+ }
+ 
+ .pag:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, #ff1867 20%, #ff1867 20% , transparent 100%);
+ }
+ 
+ .pag:hover:before {
+  transform: translateX(15em);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
